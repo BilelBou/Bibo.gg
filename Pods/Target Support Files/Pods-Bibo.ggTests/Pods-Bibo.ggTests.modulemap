@@ -1,0 +1,6 @@
+framework module Pods_Bibo_ggTests {
+  umbrella header "Pods-Bibo.ggTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

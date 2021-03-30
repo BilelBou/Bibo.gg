@@ -1,0 +1,22 @@
+PODS:
+  - Kingfisher (5.15.8):
+    - Kingfisher/Core (= 5.15.8)
+  - Kingfisher/Core (5.15.8)
+  - LeagueAPI (4.0.0)
+
+DEPENDENCIES:
+  - Kingfisher (~> 5.0)
+  - LeagueAPI
+
+SPEC REPOS:
+  trunk:
+    - Kingfisher
+    - LeagueAPI
+
+SPEC CHECKSUMS:
+  Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
+  LeagueAPI: 5298eb961eba7054d944f540a19967083e6a9538
+
+PODFILE CHECKSUM: 0ddb77538d6b2c926cbde94ea4489183311cd076
+
+COCOAPODS: 1.9.3

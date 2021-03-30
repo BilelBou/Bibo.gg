@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Bibo_gg" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="league-of-legends_logo" translatesAutoresizingMaskIntoConstraints="NO" id="XRn-Ny-K13">
+                                <rect key="frame" x="148" y="83" width="119" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="114" id="eBc-ZG-AQU"/>
+                                    <constraint firstAttribute="width" constant="119" id="uil-a4-9Qa"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search a summoner" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wo4-Yj-Gce">
+                                <rect key="frame" x="20" y="250" width="374" height="40"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="lKr-zU-mRM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QN8-yg-Gnp">
+                                <rect key="frame" x="20" y="375" width="374" height="30"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0u2-2E-yhT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wo4-Yj-Gce" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5Ex-5l-GfK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wo4-Yj-Gce" secondAttribute="trailing" constant="20" id="5nP-zU-dVl"/>
+                            <constraint firstItem="QN8-yg-Gnp" firstAttribute="top" secondItem="wo4-Yj-Gce" secondAttribute="bottom" constant="85" id="6wp-31-RgO"/>
+                            <constraint firstItem="XRn-Ny-K13" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="39" id="CzE-CQ-C2y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XRn-Ny-K13" secondAttribute="trailing" constant="147" id="Ga3-Nb-DqL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QN8-yg-Gnp" secondAttribute="trailing" constant="20" id="Ie1-Vl-qpW"/>
+                            <constraint firstItem="wo4-Yj-Gce" firstAttribute="top" secondItem="XRn-Ny-K13" secondAttribute="bottom" constant="53" id="ccg-cr-Aud"/>
+                            <constraint firstItem="XRn-Ny-K13" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="148" id="qsE-PO-JvW"/>
+                            <constraint firstItem="QN8-yg-Gnp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="yhs-Ok-sty"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchButton" destination="QN8-yg-Gnp" id="HUQ-WP-vhW"/>
+                        <outlet property="summonerSearch" destination="wo4-Yj-Gce" id="LAf-Bf-Zb9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-197.10144927536234" y="76.339285714285708"/>
+        </scene>
+        <!--Game History View Controller-->
+        <scene sceneID="HKW-nq-RCO">
+            <objects>
+                <viewController storyboardIdentifier="GameHistoryViewController" id="kzT-fq-mNS" customClass="GameHistoryViewController" customModule="Bibo_gg" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tdO-JS-0eR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugJ-cB-GLk">
+                                <rect key="frame" x="100" y="89" width="122" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="Y5r-vK-66M"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uCB-oZ-7g3">
+                                <rect key="frame" x="0.0" y="185" width="414" height="711"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BAp-P7-ZUT">
+                                <rect key="frame" x="20" y="78" width="57" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="DBh-xc-clD"/>
+                                    <constraint firstAttribute="width" constant="57" id="S8p-JS-ycU"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ErE-PN-Bjm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uCB-oZ-7g3" firstAttribute="top" secondItem="BAp-P7-ZUT" secondAttribute="bottom" constant="63" id="2hn-kr-dQD"/>
+                            <constraint firstItem="uCB-oZ-7g3" firstAttribute="leading" secondItem="ErE-PN-Bjm" secondAttribute="leading" id="AV4-c7-U89"/>
+                            <constraint firstItem="BAp-P7-ZUT" firstAttribute="top" secondItem="ErE-PN-Bjm" secondAttribute="top" constant="34" id="F3P-y8-lzK"/>
+                            <constraint firstItem="ugJ-cB-GLk" firstAttribute="top" secondItem="ErE-PN-Bjm" secondAttribute="top" constant="45" id="I8y-zh-yFQ"/>
+                            <constraint firstAttribute="bottom" secondItem="uCB-oZ-7g3" secondAttribute="bottom" id="Myt-gq-Qfi"/>
+                            <constraint firstItem="ugJ-cB-GLk" firstAttribute="leading" secondItem="ErE-PN-Bjm" secondAttribute="leading" constant="100" id="jCS-Qz-jHK"/>
+                            <constraint firstItem="ugJ-cB-GLk" firstAttribute="leading" secondItem="BAp-P7-ZUT" secondAttribute="trailing" constant="23" id="nXn-SE-E3I"/>
+                            <constraint firstItem="uCB-oZ-7g3" firstAttribute="trailing" secondItem="ErE-PN-Bjm" secondAttribute="trailing" id="peG-on-S9A"/>
+                            <constraint firstItem="BAp-P7-ZUT" firstAttribute="leading" secondItem="ErE-PN-Bjm" secondAttribute="leading" constant="20" id="qOH-dq-zUZ"/>
+                            <constraint firstItem="uCB-oZ-7g3" firstAttribute="top" secondItem="ugJ-cB-GLk" secondAttribute="bottom" constant="75" id="x9T-UK-apq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="matchHistoryTab" destination="uCB-oZ-7g3" id="DEa-5b-Z8A"/>
+                        <outlet property="profilIconImg" destination="BAp-P7-ZUT" id="Lwx-Gn-u66"/>
+                        <outlet property="summonerNameLabel" destination="ugJ-cB-GLk" id="bgK-4b-npn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5T0-Dc-sJl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="556.52173913043487" y="75.669642857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="league-of-legends_logo" width="250" height="250"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

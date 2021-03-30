@@ -1,0 +1,810 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		240FB04A25BA10E5000D283B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240FB04925BA10E5000D283B /* HomeViewController.swift */; };
+		240FB04F25BA1831000D283B /* LeagueAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240FB04E25BA1831000D283B /* LeagueAPICall.swift */; };
+		240FB05825BB2142000D283B /* SummonerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240FB05725BB2142000D283B /* SummonerModel.swift */; };
+		240FB05D25BB2D11000D283B /* GameHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240FB05C25BB2D11000D283B /* GameHistoryViewController.swift */; };
+		240FB07025BB304B000D283B /* MatchHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240FB06E25BB304B000D283B /* MatchHistoryTableViewCell.swift */; };
+		240FB07125BB304B000D283B /* MatchHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 240FB06F25BB304B000D283B /* MatchHistoryTableViewCell.xib */; };
+		247AB08625BA0ADD0085CADB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AB08525BA0ADD0085CADB /* AppDelegate.swift */; };
+		247AB08825BA0ADD0085CADB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AB08725BA0ADD0085CADB /* SceneDelegate.swift */; };
+		247AB08A25BA0ADD0085CADB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AB08925BA0ADD0085CADB /* ViewController.swift */; };
+		247AB08D25BA0ADD0085CADB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 247AB08B25BA0ADD0085CADB /* Main.storyboard */; };
+		247AB08F25BA0ADE0085CADB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 247AB08E25BA0ADE0085CADB /* Assets.xcassets */; };
+		247AB09225BA0ADE0085CADB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 247AB09025BA0ADE0085CADB /* LaunchScreen.storyboard */; };
+		247AB09D25BA0ADE0085CADB /* Bibo_ggTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AB09C25BA0ADE0085CADB /* Bibo_ggTests.swift */; };
+		247AB0A825BA0ADE0085CADB /* Bibo_ggUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AB0A725BA0ADE0085CADB /* Bibo_ggUITests.swift */; };
+		2D776ECD589FABB7A2EE3DAB /* Pods_Bibo_gg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6847831C9B9AF245CC90463B /* Pods_Bibo_gg.framework */; };
+		F24A21AC689BA250DFA89A91 /* Pods_Bibo_gg_Bibo_ggUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF615FB403D6242435519548 /* Pods_Bibo_gg_Bibo_ggUITests.framework */; };
+		F314EB4895CEF30FB71F1073 /* Pods_Bibo_ggTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32E1C7506325F50928B8CC9 /* Pods_Bibo_ggTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		247AB09925BA0ADE0085CADB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 247AB07A25BA0ADD0085CADB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 247AB08125BA0ADD0085CADB;
+			remoteInfo = Bibo.gg;
+		};
+		247AB0A425BA0ADE0085CADB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 247AB07A25BA0ADD0085CADB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 247AB08125BA0ADD0085CADB;
+			remoteInfo = Bibo.gg;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		240FB04925BA10E5000D283B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		240FB04E25BA1831000D283B /* LeagueAPICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueAPICall.swift; sourceTree = "<group>"; };
+		240FB05725BB2142000D283B /* SummonerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummonerModel.swift; sourceTree = "<group>"; };
+		240FB05C25BB2D11000D283B /* GameHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHistoryViewController.swift; sourceTree = "<group>"; };
+		240FB06E25BB304B000D283B /* MatchHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		240FB06F25BB304B000D283B /* MatchHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchHistoryTableViewCell.xib; sourceTree = "<group>"; };
+		247AB08225BA0ADD0085CADB /* Bibo.gg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bibo.gg.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		247AB08525BA0ADD0085CADB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		247AB08725BA0ADD0085CADB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		247AB08925BA0ADD0085CADB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		247AB08C25BA0ADD0085CADB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		247AB08E25BA0ADE0085CADB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		247AB09125BA0ADE0085CADB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		247AB09325BA0ADE0085CADB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		247AB09825BA0ADE0085CADB /* Bibo.ggTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Bibo.ggTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		247AB09C25BA0ADE0085CADB /* Bibo_ggTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bibo_ggTests.swift; sourceTree = "<group>"; };
+		247AB09E25BA0ADE0085CADB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		247AB0A325BA0ADE0085CADB /* Bibo.ggUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Bibo.ggUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		247AB0A725BA0ADE0085CADB /* Bibo_ggUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bibo_ggUITests.swift; sourceTree = "<group>"; };
+		247AB0A925BA0ADE0085CADB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BB7C0554ED0603FF191A807 /* Pods-Bibo.ggTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bibo.ggTests.release.xcconfig"; path = "Target Support Files/Pods-Bibo.ggTests/Pods-Bibo.ggTests.release.xcconfig"; sourceTree = "<group>"; };
+		49EADED8F1F5B4EEA744FB5F /* Pods-Bibo.gg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bibo.gg.release.xcconfig"; path = "Target Support Files/Pods-Bibo.gg/Pods-Bibo.gg.release.xcconfig"; sourceTree = "<group>"; };
+		6847831C9B9AF245CC90463B /* Pods_Bibo_gg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bibo_gg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C489B9A36296A58EFC30CFE /* Pods-Bibo.gg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bibo.gg.debug.xcconfig"; path = "Target Support Files/Pods-Bibo.gg/Pods-Bibo.gg.debug.xcconfig"; sourceTree = "<group>"; };
+		B6DB7507742842824F14E645 /* Pods-Bibo.gg-Bibo.ggUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bibo.gg-Bibo.ggUITests.debug.xcconfig"; path = "Target Support Files/Pods-Bibo.gg-Bibo.ggUITests/Pods-Bibo.gg-Bibo.ggUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BF615FB403D6242435519548 /* Pods_Bibo_gg_Bibo_ggUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bibo_gg_Bibo_ggUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D32E1C7506325F50928B8CC9 /* Pods_Bibo_ggTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bibo_ggTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC5C202823811A96F5FE0852 /* Pods-Bibo.ggTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bibo.ggTests.debug.xcconfig"; path = "Target Support Files/Pods-Bibo.ggTests/Pods-Bibo.ggTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F256E6E8D1236B6CD8D79690 /* Pods-Bibo.gg-Bibo.ggUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bibo.gg-Bibo.ggUITests.release.xcconfig"; path = "Target Support Files/Pods-Bibo.gg-Bibo.ggUITests/Pods-Bibo.gg-Bibo.ggUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		247AB07F25BA0ADD0085CADB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D776ECD589FABB7A2EE3DAB /* Pods_Bibo_gg.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		247AB09525BA0ADE0085CADB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F314EB4895CEF30FB71F1073 /* Pods_Bibo_ggTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		247AB0A025BA0ADE0085CADB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F24A21AC689BA250DFA89A91 /* Pods_Bibo_gg_Bibo_ggUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		240FB03C25BA1099000D283B /* Views  */ = {
+			isa = PBXGroup;
+			children = (
+				240FB06225BB301B000D283B /* Cells */,
+				240FB04925BA10E5000D283B /* HomeViewController.swift */,
+				240FB05C25BB2D11000D283B /* GameHistoryViewController.swift */,
+			);
+			path = "Views ";
+			sourceTree = "<group>";
+		};
+		240FB03D25BA10AB000D283B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				240FB04E25BA1831000D283B /* LeagueAPICall.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		240FB05325BB157C000D283B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				240FB05725BB2142000D283B /* SummonerModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		240FB06225BB301B000D283B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				240FB06E25BB304B000D283B /* MatchHistoryTableViewCell.swift */,
+				240FB06F25BB304B000D283B /* MatchHistoryTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		247AB07925BA0ADD0085CADB = {
+			isa = PBXGroup;
+			children = (
+				247AB08425BA0ADD0085CADB /* Bibo.gg */,
+				247AB09B25BA0ADE0085CADB /* Bibo.ggTests */,
+				247AB0A625BA0ADE0085CADB /* Bibo.ggUITests */,
+				247AB08325BA0ADD0085CADB /* Products */,
+				3CF63E4509A553A5A1112F56 /* Pods */,
+				40344503E541A47F66CF7735 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		247AB08325BA0ADD0085CADB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				247AB08225BA0ADD0085CADB /* Bibo.gg.app */,
+				247AB09825BA0ADE0085CADB /* Bibo.ggTests.xctest */,
+				247AB0A325BA0ADE0085CADB /* Bibo.ggUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		247AB08425BA0ADD0085CADB /* Bibo.gg */ = {
+			isa = PBXGroup;
+			children = (
+				240FB05325BB157C000D283B /* Models */,
+				240FB03D25BA10AB000D283B /* API */,
+				240FB03C25BA1099000D283B /* Views  */,
+				247AB08525BA0ADD0085CADB /* AppDelegate.swift */,
+				247AB08725BA0ADD0085CADB /* SceneDelegate.swift */,
+				247AB08925BA0ADD0085CADB /* ViewController.swift */,
+				247AB08B25BA0ADD0085CADB /* Main.storyboard */,
+				247AB08E25BA0ADE0085CADB /* Assets.xcassets */,
+				247AB09025BA0ADE0085CADB /* LaunchScreen.storyboard */,
+				247AB09325BA0ADE0085CADB /* Info.plist */,
+			);
+			path = Bibo.gg;
+			sourceTree = "<group>";
+		};
+		247AB09B25BA0ADE0085CADB /* Bibo.ggTests */ = {
+			isa = PBXGroup;
+			children = (
+				247AB09C25BA0ADE0085CADB /* Bibo_ggTests.swift */,
+				247AB09E25BA0ADE0085CADB /* Info.plist */,
+			);
+			path = Bibo.ggTests;
+			sourceTree = "<group>";
+		};
+		247AB0A625BA0ADE0085CADB /* Bibo.ggUITests */ = {
+			isa = PBXGroup;
+			children = (
+				247AB0A725BA0ADE0085CADB /* Bibo_ggUITests.swift */,
+				247AB0A925BA0ADE0085CADB /* Info.plist */,
+			);
+			path = Bibo.ggUITests;
+			sourceTree = "<group>";
+		};
+		3CF63E4509A553A5A1112F56 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6C489B9A36296A58EFC30CFE /* Pods-Bibo.gg.debug.xcconfig */,
+				49EADED8F1F5B4EEA744FB5F /* Pods-Bibo.gg.release.xcconfig */,
+				B6DB7507742842824F14E645 /* Pods-Bibo.gg-Bibo.ggUITests.debug.xcconfig */,
+				F256E6E8D1236B6CD8D79690 /* Pods-Bibo.gg-Bibo.ggUITests.release.xcconfig */,
+				DC5C202823811A96F5FE0852 /* Pods-Bibo.ggTests.debug.xcconfig */,
+				2BB7C0554ED0603FF191A807 /* Pods-Bibo.ggTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		40344503E541A47F66CF7735 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6847831C9B9AF245CC90463B /* Pods_Bibo_gg.framework */,
+				BF615FB403D6242435519548 /* Pods_Bibo_gg_Bibo_ggUITests.framework */,
+				D32E1C7506325F50928B8CC9 /* Pods_Bibo_ggTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		247AB08125BA0ADD0085CADB /* Bibo.gg */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 247AB0AC25BA0ADE0085CADB /* Build configuration list for PBXNativeTarget "Bibo.gg" */;
+			buildPhases = (
+				9DAED6004B92910025F4F36E /* [CP] Check Pods Manifest.lock */,
+				247AB07E25BA0ADD0085CADB /* Sources */,
+				247AB07F25BA0ADD0085CADB /* Frameworks */,
+				247AB08025BA0ADD0085CADB /* Resources */,
+				5257A28BF49A893032C13F80 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bibo.gg;
+			productName = Bibo.gg;
+			productReference = 247AB08225BA0ADD0085CADB /* Bibo.gg.app */;
+			productType = "com.apple.product-type.application";
+		};
+		247AB09725BA0ADE0085CADB /* Bibo.ggTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 247AB0AF25BA0ADE0085CADB /* Build configuration list for PBXNativeTarget "Bibo.ggTests" */;
+			buildPhases = (
+				D2841C7B162C7329D30CBC7F /* [CP] Check Pods Manifest.lock */,
+				247AB09425BA0ADE0085CADB /* Sources */,
+				247AB09525BA0ADE0085CADB /* Frameworks */,
+				247AB09625BA0ADE0085CADB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				247AB09A25BA0ADE0085CADB /* PBXTargetDependency */,
+			);
+			name = Bibo.ggTests;
+			productName = Bibo.ggTests;
+			productReference = 247AB09825BA0ADE0085CADB /* Bibo.ggTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		247AB0A225BA0ADE0085CADB /* Bibo.ggUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 247AB0B225BA0ADE0085CADB /* Build configuration list for PBXNativeTarget "Bibo.ggUITests" */;
+			buildPhases = (
+				F71ABCF79E4B9154D675EE53 /* [CP] Check Pods Manifest.lock */,
+				247AB09F25BA0ADE0085CADB /* Sources */,
+				247AB0A025BA0ADE0085CADB /* Frameworks */,
+				247AB0A125BA0ADE0085CADB /* Resources */,
+				9D51C5337E0CB6969FB7E9AE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				247AB0A525BA0ADE0085CADB /* PBXTargetDependency */,
+			);
+			name = Bibo.ggUITests;
+			productName = Bibo.ggUITests;
+			productReference = 247AB0A325BA0ADE0085CADB /* Bibo.ggUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		247AB07A25BA0ADD0085CADB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					247AB08125BA0ADD0085CADB = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					247AB09725BA0ADE0085CADB = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 247AB08125BA0ADD0085CADB;
+					};
+					247AB0A225BA0ADE0085CADB = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 247AB08125BA0ADD0085CADB;
+					};
+				};
+			};
+			buildConfigurationList = 247AB07D25BA0ADD0085CADB /* Build configuration list for PBXProject "Bibo.gg" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 247AB07925BA0ADD0085CADB;
+			productRefGroup = 247AB08325BA0ADD0085CADB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				247AB08125BA0ADD0085CADB /* Bibo.gg */,
+				247AB09725BA0ADE0085CADB /* Bibo.ggTests */,
+				247AB0A225BA0ADE0085CADB /* Bibo.ggUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		247AB08025BA0ADD0085CADB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				240FB07125BB304B000D283B /* MatchHistoryTableViewCell.xib in Resources */,
+				247AB09225BA0ADE0085CADB /* LaunchScreen.storyboard in Resources */,
+				247AB08F25BA0ADE0085CADB /* Assets.xcassets in Resources */,
+				247AB08D25BA0ADD0085CADB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		247AB09625BA0ADE0085CADB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		247AB0A125BA0ADE0085CADB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5257A28BF49A893032C13F80 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bibo.gg/Pods-Bibo.gg-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bibo.gg/Pods-Bibo.gg-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bibo.gg/Pods-Bibo.gg-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D51C5337E0CB6969FB7E9AE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bibo.gg-Bibo.ggUITests/Pods-Bibo.gg-Bibo.ggUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bibo.gg-Bibo.ggUITests/Pods-Bibo.gg-Bibo.ggUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bibo.gg-Bibo.ggUITests/Pods-Bibo.gg-Bibo.ggUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DAED6004B92910025F4F36E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bibo.gg-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2841C7B162C7329D30CBC7F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bibo.ggTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F71ABCF79E4B9154D675EE53 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bibo.gg-Bibo.ggUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		247AB07E25BA0ADD0085CADB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				247AB08A25BA0ADD0085CADB /* ViewController.swift in Sources */,
+				247AB08625BA0ADD0085CADB /* AppDelegate.swift in Sources */,
+				247AB08825BA0ADD0085CADB /* SceneDelegate.swift in Sources */,
+				240FB05825BB2142000D283B /* SummonerModel.swift in Sources */,
+				240FB07025BB304B000D283B /* MatchHistoryTableViewCell.swift in Sources */,
+				240FB04F25BA1831000D283B /* LeagueAPICall.swift in Sources */,
+				240FB04A25BA10E5000D283B /* HomeViewController.swift in Sources */,
+				240FB05D25BB2D11000D283B /* GameHistoryViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		247AB09425BA0ADE0085CADB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				247AB09D25BA0ADE0085CADB /* Bibo_ggTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		247AB09F25BA0ADE0085CADB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				247AB0A825BA0ADE0085CADB /* Bibo_ggUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		247AB09A25BA0ADE0085CADB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 247AB08125BA0ADD0085CADB /* Bibo.gg */;
+			targetProxy = 247AB09925BA0ADE0085CADB /* PBXContainerItemProxy */;
+		};
+		247AB0A525BA0ADE0085CADB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 247AB08125BA0ADD0085CADB /* Bibo.gg */;
+			targetProxy = 247AB0A425BA0ADE0085CADB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		247AB08B25BA0ADD0085CADB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				247AB08C25BA0ADD0085CADB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		247AB09025BA0ADE0085CADB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				247AB09125BA0ADE0085CADB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		247AB0AA25BA0ADE0085CADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		247AB0AB25BA0ADE0085CADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		247AB0AD25BA0ADE0085CADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C489B9A36296A58EFC30CFE /* Pods-Bibo.gg.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)\n";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 223PZ4VYA4;
+				INFOPLIST_FILE = Bibo.gg/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Bilel-Bouricha.Bibo-gg";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		247AB0AE25BA0ADE0085CADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49EADED8F1F5B4EEA744FB5F /* Pods-Bibo.gg.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)\n";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 223PZ4VYA4;
+				INFOPLIST_FILE = Bibo.gg/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Bilel-Bouricha.Bibo-gg";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		247AB0B025BA0ADE0085CADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC5C202823811A96F5FE0852 /* Pods-Bibo.ggTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)\n";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 223PZ4VYA4;
+				INFOPLIST_FILE = Bibo.ggTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Bilel-Bouricha.Bibo-ggTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bibo.gg.app/Bibo.gg";
+			};
+			name = Debug;
+		};
+		247AB0B125BA0ADE0085CADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BB7C0554ED0603FF191A807 /* Pods-Bibo.ggTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)\n";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 223PZ4VYA4;
+				INFOPLIST_FILE = Bibo.ggTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Bilel-Bouricha.Bibo-ggTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bibo.gg.app/Bibo.gg";
+			};
+			name = Release;
+		};
+		247AB0B325BA0ADE0085CADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6DB7507742842824F14E645 /* Pods-Bibo.gg-Bibo.ggUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)\n";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 223PZ4VYA4;
+				INFOPLIST_FILE = Bibo.ggUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Bilel-Bouricha.Bibo-ggUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Bibo.gg;
+			};
+			name = Debug;
+		};
+		247AB0B425BA0ADE0085CADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F256E6E8D1236B6CD8D79690 /* Pods-Bibo.gg-Bibo.ggUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)\n";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 223PZ4VYA4;
+				INFOPLIST_FILE = Bibo.ggUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Bilel-Bouricha.Bibo-ggUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Bibo.gg;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		247AB07D25BA0ADD0085CADB /* Build configuration list for PBXProject "Bibo.gg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				247AB0AA25BA0ADE0085CADB /* Debug */,
+				247AB0AB25BA0ADE0085CADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		247AB0AC25BA0ADE0085CADB /* Build configuration list for PBXNativeTarget "Bibo.gg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				247AB0AD25BA0ADE0085CADB /* Debug */,
+				247AB0AE25BA0ADE0085CADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		247AB0AF25BA0ADE0085CADB /* Build configuration list for PBXNativeTarget "Bibo.ggTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				247AB0B025BA0ADE0085CADB /* Debug */,
+				247AB0B125BA0ADE0085CADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		247AB0B225BA0ADE0085CADB /* Build configuration list for PBXNativeTarget "Bibo.ggUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				247AB0B325BA0ADE0085CADB /* Debug */,
+				247AB0B425BA0ADE0085CADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 247AB07A25BA0ADD0085CADB /* Project object */;
+}
