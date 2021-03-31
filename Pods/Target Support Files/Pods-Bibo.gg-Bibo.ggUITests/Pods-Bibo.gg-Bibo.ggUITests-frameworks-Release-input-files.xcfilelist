@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-Bibo.gg-Bibo.ggUITests/Pods-Bibo.gg-Bibo.ggUITests-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
 ${BUILT_PRODUCTS_DIR}/LeagueAPI/LeagueAPI.framework
+${BUILT_PRODUCTS_DIR}/MHLoadingButton/MHLoadingButton.framework

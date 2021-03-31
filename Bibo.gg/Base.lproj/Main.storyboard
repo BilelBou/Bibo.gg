@@ -8,10 +8,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Bibo_gg" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,13 +64,13 @@
                         <outlet property="summonerSearch" destination="wo4-Yj-Gce" id="LAf-Bf-Zb9"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-197.10144927536234" y="76.339285714285708"/>
         </scene>
         <!--Game History View Controller-->
         <scene sceneID="HKW-nq-RCO">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5T0-Dc-sJl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="GameHistoryViewController" id="kzT-fq-mNS" customClass="GameHistoryViewController" customModule="Bibo_gg" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tdO-JS-0eR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -117,7 +118,6 @@
                         <outlet property="summonerNameLabel" destination="ugJ-cB-GLk" id="bgK-4b-npn"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5T0-Dc-sJl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="556.52173913043487" y="75.669642857142847"/>
         </scene>

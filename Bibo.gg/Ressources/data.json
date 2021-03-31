@@ -1,0 +1,220 @@
+{
+    "clans": [
+        {
+            "name": "TT9 Warzone",
+            "last_message": {
+                "content": "hello team",
+                "author": {
+                    "username": "alak",
+                    "avatar_url": ""
+                },
+                "created_at": 1616074574
+            },
+            "is_read": true,
+            "members": [
+                {
+                    "avatar_url": "https://nsa40.casimages.com/img/2021/03/18/210318070354902225.png",
+                    "is_online": true
+                },
+                {
+                    "avatar_url": "https://nsa40.casimages.com/img/2021/03/18/210318070354995506.png",
+                    "is_online": true
+                },
+                {
+                    "avatar_url": "https://nsa40.casimages.com/img/2021/03/18/210318070355311410.png",
+                    "is_online": true
+                },
+                {
+                    "avatar_url": "https://nsa40.casimages.com/img/2021/03/18/210318070355580693.png",
+                    "is_online": false
+                },
+                {
+                    "avatar_url": "https://nsa40.casimages.com/img/2021/03/18/210318070355842256.png",
+                    "is_online": false
+                },
+                {
+                    "avatar_url": "https://nsa40.casimages.com/img/2021/03/18/210318070356117810.png",
+                    "is_online": false
+                }
+            ]
+        },
+        {
+            "name": "Room#97485",
+            "last_message": {
+                "content": "did you saw our game last night?",
+                "author": {
+                    "username": "Zygw0o",
+                    "avatar_url": ""
+                },
+                "created_at": 1616073574
+            },
+            "is_read": false,
+            "members": [
+                {
+                    "avatar_url": "https://nsa40.casimages.com/img/2021/03/18/210318070354902225.png",
+                    "is_online": true
+                },
+                {
+                    "avatar_url": "https://nsa40.casimages.com/img/2021/03/18/210318070354995506.png",
+                    "is_online": true
+                },
+                {
+                    "avatar_url": "https://nsa40.casimages.com/img/2021/03/18/210318070355311410.png",
+                    "is_online": true
+                },
+                {
+                    "avatar_url": "https://nsa40.casimages.com/img/2021/03/18/210318070355580693.png",
+                    "is_online": false
+                },
+                {
+                    "avatar_url": "https://nsa40.casimages.com/img/2021/03/18/210318070355842256.png",
+                    "is_online": false
+                },
+                {
+                    "avatar_url": "https://nsa40.casimages.com/img/2021/03/18/210318070356117810.png",
+                    "is_online": false
+                }
+            ]
+        },
+        {
+            "name": "PowderFam’",
+            "last_message": {
+                "content": "I found a bug",
+                "author": {
+                    "username": "Keylaw",
+                    "avatar_url": ""
+                },
+                "created_at": 1616072574
+            },
+            "is_read": true,
+            "members": [
+                {
+                    "avatar_url": "https://nsa40.casimages.com/img/2021/03/18/210318070354902225.png",
+                    "is_online": true
+                },
+                {
+                    "avatar_url": "https://nsa40.casimages.com/img/2021/03/18/210318070354995506.png",
+                    "is_online": true
+                },
+                {
+                    "avatar_url": "https://nsa40.casimages.com/img/2021/03/18/210318070355311410.png",
+                    "is_online": true
+                },
+                {
+                    "avatar_url": "https://nsa40.casimages.com/img/2021/03/18/210318070355580693.png",
+                    "is_online": false
+                },
+                {
+                    "avatar_url": "https://nsa40.casimages.com/img/2021/03/18/210318070355842256.png",
+                    "is_online": false
+                },
+                {
+                    "avatar_url": "https://nsa40.casimages.com/img/2021/03/18/210318070356117810.png",
+                    "is_online": false
+                }
+            ]
+        },
+        {
+            "name": "Vitality",
+            "last_message": {
+                "content": "Hi, there",
+                "author": {
+                    "username": "Faker",
+                    "avatar_url": ""
+                },
+                "created_at": 1616072574
+            },
+            "is_read": true,
+            "members": [
+                {
+                    "avatar_url": "https://nsa40.casimages.com/img/2021/03/18/210318070354902225.png",
+                    "is_online": true
+                },
+                {
+                    "avatar_url": "https://nsa40.casimages.com/img/2021/03/18/210318070354995506.png",
+                    "is_online": false
+                },
+                {
+                    "avatar_url": "https://nsa40.casimages.com/img/2021/03/18/210318070355311410.png",
+                    "is_online": true
+                }
+            ]
+        },
+        {
+            "name": "Room#1986",
+            "last_message": {
+                "content": "Boom headshot",
+                "author": {
+                    "username": "Mika",
+                    "avatar_url": ""
+                },
+                "created_at": 1616071574
+            },
+            "is_read": false,
+            "members": [
+                {
+                    "avatar_url": "https://nsa40.casimages.com/img/2021/03/18/210318070354902225.png",
+                    "is_online": true
+                },
+                {
+                    "avatar_url": "https://nsa40.casimages.com/img/2021/03/18/210318070354995506.png",
+                    "is_online": false
+                },
+                {
+                    "avatar_url": "https://nsa40.casimages.com/img/2021/03/18/210318070355311410.png",
+                    "is_online": true
+                },
+                {
+                    "avatar_url": "https://nsa40.casimages.com/img/2021/03/18/210318070355580693.png",
+                    "is_online": false
+                },
+                {
+                    "avatar_url": "https://nsa40.casimages.com/img/2021/03/18/210318070355842256.png",
+                    "is_online": true
+                },
+                {
+                    "avatar_url": "https://nsa40.casimages.com/img/2021/03/18/210318070356117810.png",
+                    "is_online": true
+                }
+            ]
+        },
+        {
+            "name": "PowderTeam",
+            "last_message": {
+                "content": "????",
+                "author": {
+                    "username": "Anne",
+                    "avatar_url": ""
+                },
+                "created_at": 1616070574
+            },
+            "is_read": true,
+            "members": [
+                {
+                    "avatar_url": "https://nsa40.casimages.com/img/2021/03/18/210318070354902225.png",
+                    "is_online": true
+                },
+                {
+                    "avatar_url": "https://nsa40.casimages.com/img/2021/03/18/210318070354995506.png",
+                    "is_online": false
+                },
+                {
+                    "avatar_url": "https://nsa40.casimages.com/img/2021/03/18/210318070355311410.png",
+                    "is_online": true
+                },
+                {
+                    "avatar_url": "https://nsa40.casimages.com/img/2021/03/18/210318070355580693.png",
+                    "is_online": false
+                },
+                {
+                    "avatar_url": "https://nsa40.casimages.com/img/2021/03/18/210318070355842256.png",
+                    "is_online": false
+                },
+                {
+                    "avatar_url": "https://nsa40.casimages.com/img/2021/03/18/210318070356117810.png",
+                    "is_online": false
+                }
+            ]
+        }
+    ]
+}

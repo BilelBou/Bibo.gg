@@ -9,7 +9,7 @@ import Foundation
 import LeagueAPI
 
 class LeagueCall {
-    let league = LeagueAPI(APIToken: "RGAPI-1704e1cc-1916-4bf3-815f-e044b2aaab7c")
+    let league = LeagueAPI(APIToken: "RGAPI-14b93601-d32a-4650-ba64-3aa1d31f6100")
 
     func getSummonerID(summonerName: String, completion:@escaping (([SummonerGames], String, [SummonerStats]) -> Void)) {
         league.lolAPI.getSummoner(byName: summonerName, on: .EUW) { (summonerData, errorMsg) in

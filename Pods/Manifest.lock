@@ -3,20 +3,24 @@ PODS:
     - Kingfisher/Core (= 5.15.8)
   - Kingfisher/Core (5.15.8)
   - LeagueAPI (4.0.0)
+  - MHLoadingButton (0.1.2)
 
 DEPENDENCIES:
   - Kingfisher (~> 5.0)
   - LeagueAPI
+  - MHLoadingButton
 
 SPEC REPOS:
   trunk:
     - Kingfisher
     - LeagueAPI
+    - MHLoadingButton
 
 SPEC CHECKSUMS:
   Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
   LeagueAPI: 5298eb961eba7054d944f540a19967083e6a9538
+  MHLoadingButton: a08f05dfe866e6b2febd97884c1cf1427d25f6f0
 
-PODFILE CHECKSUM: 0ddb77538d6b2c926cbde94ea4489183311cd076
+PODFILE CHECKSUM: 0430c74169f57a732a27705be1b2c0a92b33416d
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.1

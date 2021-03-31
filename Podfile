@@ -6,6 +6,7 @@ target 'Bibo.gg' do
   use_frameworks!
   pod 'LeagueAPI'
   pod 'Kingfisher', '~> 5.0'
+  pod 'MHLoadingButton'
 
 
   # Pods for Bibo.gg
