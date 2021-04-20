@@ -10,11 +10,6 @@ import LeagueAPI
 import Kingfisher
 
 class MatchHistoryTableViewCell: UITableViewCell {
-    //@IBOutlet weak var gameTypeLabel: UILabel!
-    //@IBOutlet weak var date: UILabel!
-    //@IBOutlet weak var role: UILabel!
-    //@IBOutlet weak var statsLabel: UILabel!
-    //@IBOutlet weak var imageChamp: UIImageView!
     
     private lazy var containerView: UIView = UIView()..{
         $0.backgroundColor = Color.darkGray
@@ -60,7 +55,6 @@ class MatchHistoryTableViewCell: UITableViewCell {
     func configureStyleAndLayout() {
         contentView.backgroundColor = Color.black
         contentView.addSubview(containerView)
-        //containerView.addSubview(gameTypeLabel)
         containerView.addSubview(date)
         containerView.addSubview(role)
         containerView.addSubview(statsLabel)
@@ -117,7 +111,8 @@ class MatchHistoryTableViewCell: UITableViewCell {
         }
     }
     
-    public func configureStats(with stats:String) {
-        statsLabel.attributedText = stats.typography(.title1, color: Color.black)
+    public func configureStats(kills:Int, deaths: Int, assists: Int) {
+        let statString = String(kills) + "/" + String(deaths) + "/" + String(assists)
+        statsLabel.attributedText = statString.typography(.title1, color: Color.black)
     }
 }
