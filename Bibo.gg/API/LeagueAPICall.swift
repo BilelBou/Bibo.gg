@@ -11,54 +11,33 @@ import LeagueAPI
 class LeagueCall {
     let league = LeagueAPI(APIToken:"RGAPI-86a02b38-2b6d-4dbc-aee0-ccca83fd3a5d")
 
-    func getSummonerID(summonerName: String, completion:@escaping (([SummonerGames], String, [SummonerStats]) -> Void)) {
+    func getGameHistory(summonerName: String, completion:@escaping ([SummonerGamesStat]) -> Void) {
+        var summonerGamesStats: [SummonerGamesStat] =  []
+        let group = DispatchGroup()
+
         league.lolAPI.getSummoner(byName: summonerName, on: .EUW) { (summonerData, errorMsg) in
             if let summonerData = summonerData {
-                let summoner = Summoner.init(summonerId: summonerData.id, accountId: summonerData.accountId, summonerPuuid: summonerData.puuid, iconID: summonerData.iconId)
-                    self.getSummonerHistory(accountID: summoner.accountId) { summonersGames, summonerstats in
-                        self.league.lolAPI.getProfileIcon(by: summoner.iconID) { (profileIcon, errorMsg) in
-                            if let profileIcon = profileIcon {
-                                print("Success!")
-                                completion(summonersGames, profileIcon.profileIcon.url, summonerstats)
-                            }
-                            else {
-                                print("Request failed cause: \(errorMsg ?? "No error description")")
-                            }
-                        }
-                    }
-                print("Success!")
-            }
-            else {
-                print("Request failed cause: \(errorMsg ?? "No error description")")
-            }
-        }
-    }
-    
-    func getSummonerHistory(accountID: AccountId, completion:@escaping (([SummonerGames], [SummonerStats]) -> Void)) {
-        var summonerGames: [SummonerGames] =  []
-        var summonerStats: [SummonerStats] = []
-
-        let group = DispatchGroup()
-        league.lolAPI.getMatchList(by: accountID, on: .EUW, beginIndex: 0, endIndex: 10) { (matchList, errorMsg) in
-            if let matchList = matchList {
-                for match in matchList.matches {
-                    group.enter()
-                    self.league.lolAPI.getChampionDetails(by: match.championId) { (champion, errorMsg) in
-                        if let champion = champion {
-                            summonerGames.append(SummonerGames.init(role: match.lane, date: match.gameDate.date, champion: match.championId, lane: match.lane, GameType: match.queue.mode, ChampionUrl: (champion.images?.square.url)!))
-                        }
-                        else {
-                            print("Request failed cause: \(errorMsg ?? "No error description")")
-                        }
-                        self.league.lolAPI.getMatch(by: match.gameId, on: .EUW) { (game, errorMsg) in
-                            if let game = game {
-                                for participants in game.participantsInfo {
-                                    if (participants.championId == champion?.championId) {
-                                        let teamID = participants.teamId
-                                        for team in game.teamsInfo {
-                                            if team.teamId == teamID {
-                                                summonerStats.append(SummonerStats.init(win: team.win, stats: String(participants.stats.kills) +  "/" + String(participants.stats.deaths) + "/" + String(participants.stats.assists)))
-                                                group.leave()
+                self.league.lolAPI.getMatchList(by: summonerData.accountId, on: .EUW, beginIndex: 0, endIndex: 20) { (matchList, errorMsg) in
+                    if let matchList = matchList {
+                        for match in matchList.matches {
+                            group.enter()
+                            self.league.lolAPI.getMatch(by: match.gameId, on: .EUW) { (game, errorMsg) in
+                                if let game = game {
+                                    for participant in game.participants {
+                                        if participant.player.accountId == summonerData.accountId {
+                                            for participantInfo in game.participantsInfo {
+                                                if participantInfo.participantId == participant.participantId {
+                                                    for team in game.teamsInfo {
+                                                        if team.teamId == participantInfo.teamId {
+                                                            self.league.lolAPI.getChampionDetails(by: participantInfo.championId) { (ChampionDetails, errorMsg) in
+                                                                if let championDetails = ChampionDetails {
+                                                                    summonerGamesStats.append(SummonerGamesStat.init(role: match.role, date: match.gameDate.date, championUrl: (championDetails.images?.square.url)!, gameType: match.queue.mode, win: team.win, kills: participantInfo.stats.kills, death: participantInfo.stats.deaths, assists: participantInfo.stats.assists))
+                                                                    group.leave()
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
                                             }
                                         }
                                     }
@@ -66,13 +45,10 @@ class LeagueCall {
                             }
                         }
                     }
+                    group.notify(queue: DispatchQueue.main) {
+                        completion(summonerGamesStats)
+                    }
                 }
-                group.notify(queue: DispatchQueue.main) {
-                    completion(summonerGames, summonerStats)
-                }
-            }
-            else {
-                print("Request failed cause: \(errorMsg ?? "No error description")")
             }
         }
     }

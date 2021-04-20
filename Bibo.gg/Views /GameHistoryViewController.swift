@@ -10,8 +10,7 @@ import Kingfisher
 
 class GameHistoryViewController: Controller {
     var summonerName: String = " "
-    var summonersGames: [SummonerGames] = []
-    var summonerStats: [SummonerStats] = []
+    var summonersGames: [SummonerGamesStat] = []
     var championListUrl: [String] = []
     var profilIconUrl: String = " "
     static let rowHeight: CGFloat = 158
@@ -33,14 +32,14 @@ class GameHistoryViewController: Controller {
         $0.backgroundColor = Color.black
     }
     
-    private lazy var profilIconImg: UIImageView = UIImageView()..{
-        $0.translatesAutoresizingMaskIntoConstraints = false
-        let url = URL(string: profilIconUrl)!
-        let ressource = ImageResource(downloadURL: url)
-        $0.kf.setImage(with: ressource)
-        $0.widthAnchor.constraint(equalToConstant: 50).isActive = true
-        $0.heightAnchor.constraint(equalToConstant: 50).isActive = true
-    }
+//    private lazy var profilIconImg: UIImageView = UIImageView()..{
+//        $0.translatesAutoresizingMaskIntoConstraints = false
+//        let url = URL(string: profilIconUrl)!
+//        let ressource = ImageResource(downloadURL: url)
+//        $0.kf.setImage(with: ressource)
+//        $0.widthAnchor.constraint(equalToConstant: 50).isActive = true
+//        $0.heightAnchor.constraint(equalToConstant: 50).isActive = true
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,16 +60,16 @@ class GameHistoryViewController: Controller {
         view.backgroundColor = Color.black
         view.addSubview(matchHistoryTab)
         view.addSubview(summonerNameLabel)
-        view.addSubview(profilIconImg)
+        //view.addSubview(profilIconImg)
         
         NSLayoutConstraint.activate([
             summonerNameLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: Margin._18),
             summonerNameLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Margin._20),
             
-            profilIconImg.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: Margin._18),
-            profilIconImg.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Margin._20),
+//            profilIconImg.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: Margin._18),
+//            profilIconImg.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Margin._20),
             
-            matchHistoryTab.topAnchor.constraint(equalTo: profilIconImg.bottomAnchor, constant: Margin._18),
+            matchHistoryTab.topAnchor.constraint(equalTo: summonerNameLabel.bottomAnchor, constant: Margin._18),
             matchHistoryTab.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             matchHistoryTab.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             matchHistoryTab.bottomAnchor.constraint(equalTo: view.bottomAnchor)
@@ -89,10 +88,11 @@ extension GameHistoryViewController: UITableViewDelegate, UITableViewDataSource 
         let cell: MatchHistoryTableViewCell = matchHistoryTab.dequeue(for: indexPath)
         cell.configureDate(with: summonersGames[indexPath.row].date)
         cell.configureRole(with: summonersGames[indexPath.row].role)
-        cell.configureGameType(with: summonersGames[indexPath.row].GameType)
-        cell.configureImage(with: summonersGames[indexPath.row].ChampionUrl)
-        cell.configureWin(with: summonerStats[indexPath.row].win)
-        cell.configureStats(with: summonerStats[indexPath.row].stats)
+        cell.configureGameType(with: summonersGames[indexPath.row].gameType)
+        cell.configureImage(with: summonersGames[indexPath.row].championUrl)
+        cell.configureWin(with: summonersGames[indexPath.row].win)
+        cell.configureStats(kills: summonersGames[indexPath.row].kills, deaths: summonersGames[indexPath.row].death, assists: summonersGames[indexPath.row].assists)
+
         return cell
     }
 }

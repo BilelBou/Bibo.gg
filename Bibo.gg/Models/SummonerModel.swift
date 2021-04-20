@@ -8,28 +8,13 @@
 import Foundation
 import LeagueAPI
 
-struct Summoner {
-    var summonerId: SummonerId
-    var accountId: AccountId
-    var summonerPuuid: SummonerPuuid
-    var iconID: ProfileIconId
-}
-
-struct SummonerGames {
+struct SummonerGamesStat {
     var role: String
     var date: Date
-    var champion: ChampionId
-    var lane: String
-    var GameType: QueueMode.QueueModes
-    var ChampionUrl: String
-}
-
-struct SummonerStats {
-    var win:Bool
-    var stats:String
-}
-
-struct SummonerSpells {
-    var urlSummonerSpell1: String
-    var urlSummonerSpell2: String
+    var championUrl: String
+    var gameType: QueueMode.QueueModes
+    var win: Bool
+    var kills: Int
+    var death: Int
+    var assists: Int
 }

@@ -12,7 +12,7 @@ import MHLoadingButton
 class HomeViewController: Controller {
 
     private let leagueAPI = LeagueCall()
-    var summonersGamesTab: [SummonerGames] = []
+    var summonersGamesTab: [SummonerGamesStat] = []
     
     private lazy var summonerSearchField: UITextField = UITextField()..{
         $0.translatesAutoresizingMaskIntoConstraints = false
@@ -67,20 +67,20 @@ class HomeViewController: Controller {
             searchButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Margin._16),
             ])
     }
+    
     @IBAction func searchAction(_ sender: Any) {
         searchButton.indicator = UIActivityIndicatorView()
-        leagueAPI.getSummonerID(summonerName: summonerSearchField.text!) { summonersGames, profilIcon, summonerStats in
-            self.summonersGamesTab = summonersGames
+        leagueAPI.getGameHistory(summonerName: summonerSearchField.text!) { summonerGamesStat in
+            self.summonersGamesTab = summonerGamesStat
             DispatchQueue.main.async {
                 let gameHistoryView = GameHistoryViewController()
+                let gameHistoryWithNavBar = UINavigationController(rootViewController: gameHistoryView)
+                gameHistoryWithNavBar.modalPresentationStyle = .fullScreen
                 gameHistoryView.summonersGames = self.summonersGamesTab
                 gameHistoryView.summonerName = self.summonerSearchField.text!
-                gameHistoryView.profilIconUrl = profilIcon
-                gameHistoryView.summonerStats = summonerStats
-                let gameHistoryWithBar = UINavigationController(rootViewController: gameHistoryView)
-                gameHistoryWithBar.modalPresentationStyle = .fullScreen
-                self.present(gameHistoryWithBar, animated: true, completion: nil)
+                self.present(gameHistoryWithNavBar, animated: true, completion: nil)
             }
+
         }
     }
 }
