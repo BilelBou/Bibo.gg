@@ -71,7 +71,7 @@ class HomeViewController: Controller {
         searchButton.indicator = UIActivityIndicatorView()
         leagueAPI.getSummonerID(summonerName: summonerSearchField.text!) { summonersGames, profilIcon, summonerStats in
             self.summonersGamesTab = summonersGames
-=            DispatchQueue.main.async {
+            DispatchQueue.main.async {
                 let gameHistoryView = GameHistoryViewController()
                 gameHistoryView.summonersGames = self.summonersGamesTab
                 gameHistoryView.summonerName = self.summonerSearchField.text!

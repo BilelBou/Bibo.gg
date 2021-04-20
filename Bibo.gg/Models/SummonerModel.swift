@@ -28,3 +28,8 @@ struct SummonerStats {
     var win:Bool
     var stats:String
 }
+
+struct SummonerSpells {
+    var urlSummonerSpell1: String
+    var urlSummonerSpell2: String
+}
