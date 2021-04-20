@@ -9,7 +9,7 @@ import Foundation
 import LeagueAPI
 
 class LeagueCall {
-    let league = LeagueAPI(APIToken:"RGAPI-86a02b38-2b6d-4dbc-aee0-ccca83fd3a5d")
+    let league = LeagueAPI(APIToken:"APIKEY")
 
     func getGameHistory(summonerName: String, completion:@escaping ([SummonerGamesStat]) -> Void) {
         var summonerGamesStats: [SummonerGamesStat] =  []
